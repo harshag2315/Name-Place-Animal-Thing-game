@@ -1,0 +1,95 @@
+#report and discription of NPAT2.py file
+This Python program is a word game that involves multiple players. The game starts by asking 
+the number of players, and then each player enters their name. The program then displays the 
+rules of the game, which include a maximum time limit of 40 seconds for each player, the 
+possibility of elimination due to an invalid character, and the rewards for correct and 
+incorrect answers.
+
+After displaying the rules, the program selects a random uppercase letter and prompts each 
+player to form a name, a place, an animal, and a thing starting with that letter. The program 
+then records the time taken by each player to complete their input and checks if the input is 
+valid.
+
+The program then calculates the marks for each player based on their input. Each correct answer 
+is rewarded with 10 points, while incorrect answers receive 0 points. If a player's animal, name, 
+place, or thing does not start with the specified letter or contains an invalid character, that 
+answer is considered incorrect.
+
+If a player takes more than 40 seconds to complete their input, their data and name are removed 
+from the game. After the marks are calculated, the program displays the input and marks of each 
+player and announces the winner or multiple winners.
+
+The program gives the players an option to play again or exit the game.
+
+Imported modules:
+
+time: to measure the time taken by each player
+random: to select a random uppercase letter
+string: to generate uppercase and lowercase letters
+animal_checker: a module containing functions to check if a word is an animal
+thing_checker: a module containing functions to check if a word is a thing
+country_checker: a module containing functions to check if a word is a place/country
+
+Functions:
+
+is_animal: a function to check if a word is an animal
+is_thing: a function to check if a word is a thing
+is_place: a function to check if a word is a place/country
+The main program uses a while loop to allow players to play multiple times. Within the loop, 
+the program asks for the number of players and their names, displays the rules, and prompts 
+players to form words starting with a randomly selected uppercase letter. Then, the program 
+records the time taken by each player, checks if their input is valid, and calculates their marks.
+
+The program then displays the input and marks of each player and announces the winner or multiple 
+winners. The players can choose to play again or exit the game.
+
+#report and discription of animal_checker.py file
+The given program uses the Natural Language Toolkit (NLTK) library in Python to check 
+whether the given input string is an animal name or not.
+
+The program starts by importing the necessary module from the NLTK library and downloading 
+the WordNet database using the nltk.download('wordnet') function. WordNet is a lexical 
+database for the English language that is used for natural language processing tasks.
+
+The program defines a function is_animal(animal) that takes an input string animal as 
+its parameter. The function checks if the input string is an animal name by using the 
+wordnet.synsets(animal) function, which returns a list of synsets (sets of synonyms) for the 
+given word. If the length of the list is greater than 0, the function returns True, 
+indicating that the input string is an animal name. Otherwise, the function returns False.
+
+#report and discription of country_checker.py file
+The program uses the geopy library to determine if a place exists. It defines a function 
+called is_place that takes a string argument representing a place name.
+
+The function creates a Nominatim object from the geopy.geocoders module and sets a user 
+agent for the object. The user agent is a string that identifies the user or the application 
+that is making the request.
+
+Next, the function tries to geocode the place by calling the geocode method of the Nominatim 
+object with the place argument. The geocode method returns a Location object if it is able to 
+geocode the place, otherwise it returns None.
+
+Finally, the function checks if the location variable is not None. If it is not None, the 
+function returns True, indicating that the place exists. Otherwise, the function returns False, 
+indicating that the place does not exist or could not be geocoded.
+
+Note that the Nominatim object sends requests to the OpenStreetMap (OSM) API, which has a usage 
+policy that should be respected. The user_agent parameter is used to identify the application 
+making the request, and can be set to any string.
+
+#report and discription of thing_checker.py file
+The program imports the Natural Language Toolkit (nltk) library and downloads the "wordnet" corpus 
+from nltk. The "wordnet" corpus is a lexical database for English language, which includes words 
+with their definitions, synonyms, antonyms, and other related words.
+
+The program defines a function called "is_thing" that takes an input string as an argument. The 
+function uses the "wordnet" corpus to check if the input string is a valid noun or not. The function 
+does this by calling the "synsets" method of the "wordnet" corpus with the input string and the part 
+of speech (pos) as "NOUN".
+
+If the "synsets" method returns one or more synsets, then the input string is considered a valid noun 
+and the function returns True. Otherwise, the function returns False.
+
+The program is useful for tasks that involve identifying nouns in text data, such as text 
+classification or natural language processing. The program demonstrates the use of the "wordnet" corpus 
+from the nltk library for identifying nouns in text data.

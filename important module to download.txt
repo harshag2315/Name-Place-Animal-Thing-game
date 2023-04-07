@@ -1,0 +1,13 @@
+In order to play this game you have use these modules:
+-->nltk
+-->wordnet
+-->geopy
+-->Nominatim
+-->time
+-->string
+-->random
+
+to install these module:
+step1:open terminal
+step2:write 'pip install nltk' on terminal
+step3:do step 2 using different different modules
