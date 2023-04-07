@@ -1,4 +1,4 @@
-This is a very interesting game which is widly play in india
+This is a very interesting game which is widely play in india
 This Python program is a word game that involves multiple players. The game starts by asking 
 the number of players, and then each player enters their name. The program then displays the 
 rules of the game, which include a maximum time limit of 40 seconds for each player, the 
