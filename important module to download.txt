@@ -1,8 +1,6 @@
 In order to play this game you have use these modules:
 -->nltk
 -->wordnet
--->geopy
--->Nominatim
 -->time
 -->string
 -->random
